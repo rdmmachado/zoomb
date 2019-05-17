@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="frwMestre.master.cs" Inherits="Zoomb.frwMestre" %>
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Sistema Zoomb</title>
+
+    <link type="text/css" rel="stylesheet" href="Content/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="Content/bootstrap.min.css" />
+    <link href="Content/Stilo.css" rel="stylesheet" />
+    <link href="Content/cssPaginacao.css" rel="stylesheet" />
+
+
+    <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="Scripts/umd/popper.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <%--    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ml-auto">
+
+
+        <a class="navbar-brand " href="#">ZOOMB SISTEMA WEB</a>
+        
+        <button class="navbar btn ml-5" type="button" data-toggle="collapse" data-target="#Menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div id="" class="collapse navbar-collapse">
+
+            <ul class="navbar navbar-nav  ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sair</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+
+    <div class="d-flex">
+
+        <!-- Sidebar -->
+        <div id="Menu" class=" navbar-expand navbar-collapse navbar-light bg-info ">
+            <div id="login">
+                <h1 class="text-center">BEM VINDO</h1>
+            </div>
+
+            <div class="list-group ">
+                 
+                <a href="#" class="list-group-item list-group-item-action list-group-item-info bg-info  font-weight-bold" data-toggle="collapse" data-target="#Cadastro">
+                   <i class="fas fa-edit fa-xs"></i>&nbsp;&nbsp;Cadastro</a>
+             <div id="Cadastro" class="collapse navbar-expand-lg navbar-light bg-info ">
+                    <a href="webPaciente.aspx" class="list-group-item list-group-item-action list-group-item-info bg-info small">Paciente</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-info bg-info small">Marketing</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-info bg-info small">Dentista</a>
+                </div>
+
+                  <a href="#" class="list-group-item list-group-item-action list-group-item-info bg-info  font-weight-bold" data-toggle="collapse" data-target="#Financeiro">
+                    <i class="fas fa-edit fa-xs"></i>&nbsp;&nbsp;Financeiro</a>
+                
+             <div id="Financeiro" class="collapse navbar-expand-lg navbar-light bg-info ">
+                    <a href="webPaciente.aspx" class="list-group-item list-group-item-action list-group-item-info bg-info small">Saída</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-info bg-info small">Entrada</a>
+             </div>
+
+                <a href="#" class="list-group-item list-group-item-action list-group-item-info bg-info  font-weight-bold">
+                    <i class="fas fa-edit fa-xs"></i>&nbsp;&nbsp;Colaborador</a>
+              
+                <a href="#" class="list-group-item list-group-item-action list-group-item-info bg-info  font-weight-bold">
+                    <i class="fas fa-edit fa-xs"></i>&nbsp;&nbsp;Relatorio</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-info bg-info  font-weight-bold">
+                    <i class="fas fa-edit fa-xs"></i>&nbsp;&nbsp;Agendamento</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-info bg-info  font-weight-bold">
+                    <i class="fas fa-edit fa-xs"></i>&nbsp;&nbsp;Status</a>
+            </div>
+        </div>
+
+        <div class=" container-fluid">
+            <asp:ContentPlaceHolder ID="cphMestre" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+    </div>
+
+    <div id="" class="fixed-bottom text-center">
+        <span>Copyright © Sistema Zoomb</span>
+    </div>
+
+
+    <%--</form>--%>
+</body>
+</html>
